@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ranckprogram/PracticeWebpack/issues"
   },
-  "homepage": "https://github.com/ranckprogram/PracticeWebpack#readme"
+  "homepage": "https://github.com/ranckprogram/PracticeWebpack#readme",
+  "devDependencies": {
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  }
 }
