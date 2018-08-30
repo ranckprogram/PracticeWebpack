@@ -6,7 +6,8 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
 		path: __dirname + '/dist',
-		filename: 'js/mari.js'
+		filename: 'js/mari.js',
+		publicPath: 'http://cdn.bootcdn.com/'
 	},
 	plugins: [
 		new htmlWebpackPlugin({
