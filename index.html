@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <!--<link rel="stylesheet" href="src/assets/css/common.css">-->
+    <title><%= htmlWebpackPlugin.options.title%></title>
 </head>
 <body>
 <div class="box"></div>
+<%= JSON.stringify(htmlWebpackPlugin) %>
+
+<% for(var attr in htmlWebpackPlugin.options) { %>
+    <%= attr %>
+<% } %>
+
+<% for(var attr in htmlWebpackPlugin.options) { %>
+    <%= attr %>
+<% } %>
 </body>
 <script src="dist/main.js"></script>
 </html>
