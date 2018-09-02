@@ -1,4 +1,6 @@
 var doLib =require('./do')
-require('style-loader!css-loader!./assets/css/common.css')
+// import doLib from './do'
+// import './assets/css/common.css'
+require('./assets/css/common.css')
 
-console.log(doLib.name)
+console.log(doLib.getName())

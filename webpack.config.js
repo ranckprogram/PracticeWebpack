@@ -7,7 +7,26 @@ module.exports = {
 	output: {
 		path: __dirname + '/dist',
 		filename: 'js/mari.js',
-		publicPath: 'http://cdn.bootcdn.com/'
+		// publicPath: 'http://cdn.bootcdn.com/'
+	},
+	module: {
+		rules: [{
+			test: /\.js$/,
+			use: {
+				loader: 'babel-loader'
+			}
+		}, {
+				test: /\.css$/,
+				use: [
+					{
+						loader: "style-loader"
+					}, {
+						loader: "css-loader"
+					}
+				]
+			}
+		
+		]
 	},
 	plugins: [
 		new htmlWebpackPlugin({
