@@ -6,14 +6,25 @@
 </head>
 <body>
 <div class="box"></div>
-<%= JSON.stringify(htmlWebpackPlugin) %>
+<div></div>
+<div style="word-break: break-all">
+    <%= JSON.stringify(htmlWebpackPlugin) %>
+</div>
 
 <% for(var attr in htmlWebpackPlugin.options) { %>
-    <%= attr %>
+<p><%= attr %></p>
 <% } %>
-
+<br>
 <% for(var attr in htmlWebpackPlugin.options) { %>
-    <%= attr %>
+<div><%= attr %></div>
 <% } %>
 </body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.js"></script>
+<script>
+	$(document).ready(function () {
+		$.get('/api/user', function (data) {
+			console.dir(data)
+		})
+	})
+</script>
 </html>

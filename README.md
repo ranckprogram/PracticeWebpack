@@ -36,4 +36,7 @@ require('style-loader!css-loader!./assets/css/common.css')
 - 处理es6的babel
 - 处理css style-loader css-loader
 - 处理less sass
-- 处理图片的 file-loader url-
+- 处理图片的 file-loader url-loader
+
+### webpack-dev-server
+

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --colors --progress --display-reasons --display-modules"
+    "dev": "webpack-dev-server --colors --progress --display-reasons --display-modules"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "babel-runtime": "^6.26.0",
     "css-loader": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "style-loader": "^0.23.0"
+    "style-loader": "^0.23.0",
+    "webpack-dev-server": "^3.1.7"
   }
 }

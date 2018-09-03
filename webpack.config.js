@@ -35,5 +35,17 @@ module.exports = {
 			template: 'index.html',
 			title: 'ranck home page'
 		})
-	]
+	],
+	devServer: {
+		// contentBase: '',
+		open: true,
+		// inline: true,
+		progress: true,
+		proxy: {
+			'/api': {
+				target: 'http://192.168.17.1:3000',
+				secure: false
+			}
+		}
+	}
 }
