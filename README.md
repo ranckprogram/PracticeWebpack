@@ -39,4 +39,6 @@ require('style-loader!css-loader!./assets/css/common.css')
 - 处理图片的 file-loader url-loader
 
 ### webpack-dev-server
-
+- 热启动
+- 接口代理
+- 热更新
