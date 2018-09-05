@@ -21,15 +21,28 @@ module.exports = {
 		}, {
 			test: /\.less$/,
 			use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
-		}, {
+		},
+		// 	{
+		// 	test: /\.(png|jpg|gif)$/,
+		// 	use: [
+		// 		{
+		// 			loader: 'file-loader',
+		// 			options: {}   // 这里可以重新命名
+		// 		}
+		// 	]
+		// },
+			{
 			test: /\.(png|jpg|gif)$/,
 			use: [
 				{
-					loader: 'file-loader',
-					options: {}
+					loader: 'url-loader',
+					query: {
+						limit: 20000
+					}
 				}
 			]
-		}]
+		}
+		]
 	},
 	plugins: [
 		new htmlWebpackPlugin({
