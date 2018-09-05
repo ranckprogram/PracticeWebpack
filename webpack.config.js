@@ -16,21 +16,12 @@ module.exports = {
 				loader: 'babel-loader'
 			}
 		}, {
-				test: /\.css$/,
-				use: [
-					{
-						loader: "style-loader"
-					}, {
-						loader: "css-loader"
-					}
-				]
-			}, {
+			test: /\.css$/,
+			use: ["style-loader", "css-loader", "postcss-loader"]
+		}, {
 			test: /\.less$/,
-			loader: 'style-loader!css-loader!less-loader'
-			
-		}
-		
-		]
+			use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
+		}]
 	},
 	plugins: [
 		new htmlWebpackPlugin({
