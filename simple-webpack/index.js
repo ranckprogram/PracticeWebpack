@@ -1,3 +1,3 @@
-import tools from './src/tools'
-console.logz(tools)
+import tools from './src/tools.js'
+console.log(tools)
 console.log(666)
