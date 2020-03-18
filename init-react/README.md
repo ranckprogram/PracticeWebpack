@@ -84,6 +84,7 @@ npx webpack
         - less-loader
         - css-loader
         - post-css
+            - autoprefixer
         - style-loader（另一种方式css提取）
     - 图片处理
         - file-loader
@@ -147,9 +148,32 @@ npm i postcss-loader autoprefixer -D
 ```
 
 ```javascript
+// postcss.config.js
+
+module.exports = {
+	plugins: [
+		require('autoprefixer')({
+			browsers: ['last 2 versions']
+		})
+	]
+}
+
 
 ```
 
+css 文件还可以通过插件方式抽取成单独文件，
+- 可以减少app.js的体积
+- 这会增加文件数量
+- 浏览器中也不必各种创造 style 插入dom
+
+- mini-css-extract-plugin （提取资源）
+- OptimizeCSSAssetsPlugin （压缩代码）【放在生产环境比较好】
+
+**注意**
+MiniCssExtractPlugin.loader和style-loader会有冲突，两个只能保留一个
+
+
+其他格式的数据（csv，excel之类）我暂时遇到的还比较少，处理方式暂时放放
 
 ### 第三阶段，性能优化
 
