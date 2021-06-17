@@ -3,9 +3,10 @@ class HelloPlugin {
     this.options = options;
   }
   apply(compiler) {
-    console.log(compiler.hooks)
-    compiler.hooks.done.tap("MYWebpackPlugin", () => {
-      console.log(this.options);
+    // console.log("webpack hooks", Object.keys(compiler.hooks));
+    compiler.hooks.done.tap("MYWebpackPlugin", (compilation) => {
+      console.log("webpack compilation hooks",compilation.compilation,  Object.keys(compilation));
+      console.log("options", this.options);
     });
   }
 }

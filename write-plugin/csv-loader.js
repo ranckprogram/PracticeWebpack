@@ -1,8 +1,7 @@
 module.exports = function csvLoader(resource, options) {
-  console.log(resource, options);
+  console.log("loader Data",resource, options);
 
   const table = resource.split("\r\n");
-  console.log(table);
   let header = [];
   let body = [];
 
@@ -14,7 +13,6 @@ module.exports = function csvLoader(resource, options) {
     body = data.map((item) => item.split(","));
   }
 
-  console.log(header,body)
   return `export default ${JSON.stringify({
     header,
     body
